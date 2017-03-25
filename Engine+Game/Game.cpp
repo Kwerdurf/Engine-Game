@@ -3,9 +3,11 @@
 #include <stdlib.h>
 
 
-Game::Game(int lvls) : gameWindow(sf::VideoMode(640, 480), "Game"), levels((Scene*)malloc(lvls + 1))
+Game::Game(int lvls) : gameWindow(sf::VideoMode(640, 480), "Game")
 {
-	
+	for (int i = 0; i < lvls; i++)
+		levels.push_back(Scene());
+
 }
 
 
@@ -33,8 +35,14 @@ void Game::processEvents()
 
 void Game::update()
 {
+
 }
 
 void Game::render(Scene lvl)
 {
+	
+	gameWindow.clear();
+	gameWindow.draw(lvl.sprites[0]);
+	gameWindow.display();
+
 }

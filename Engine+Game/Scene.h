@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <vector>
 
 class Scene
 {
@@ -7,10 +8,9 @@ public:
 	Scene();
 	~Scene();
 
-	sf::Sprite* sprites;
-	enum Textures
-	{
+	std::vector<sf::Sprite> sprites;
+	
 
-	};
+	
 };
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "Scene.h"
+#include <vector>
 #include "SFML\Graphics.hpp"
 
 
@@ -11,13 +12,13 @@ public:
 	~Game();
 	void run();
 
-	Scene* levels;
+	std::vector<Scene> levels;
 private:
 	void processEvents();
 	void update();
 	void render(Scene lvl);
 
-	sf::Window gameWindow;
+	sf::RenderWindow gameWindow;
 	
 };
 
