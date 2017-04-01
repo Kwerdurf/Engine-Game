@@ -9,7 +9,8 @@ class TextureHolder
 public:
 	TextureHolder();
 	~TextureHolder();
-	Scene scene;
+
+	void load();
 private:
 	std::map<std::string, std::unique_ptr<sf::Texture> > texturemap;
 };

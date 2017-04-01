@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include <vector>
+#include <string>
+#include "Entity.h"
 
 class Scene
 {
@@ -8,8 +10,13 @@ public:
 	Scene();
 	~Scene();
 
-	std::vector<sf::Sprite> sprites;
+	//bool isPlayable;
+
+	std::vector<Entity> entities;
 	
+	
+private:
+	bool loadTextures();
 
 	
 };

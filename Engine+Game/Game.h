@@ -13,11 +13,16 @@ public:
 	void run();
 
 	std::vector<Scene> levels;
+
 private:
 	void processEvents();
-	void update();
+	void update(sf::Time time);
 	void render(Scene lvl);
+	void changeScene(Scene* newScene);
 
+
+	sf::Time TimePerFrame = sf::seconds(1.f/60.f);
+	Scene* activeScene;
 	sf::RenderWindow gameWindow;
 	
 };
