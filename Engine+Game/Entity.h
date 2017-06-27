@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include <utility>
+#include <string>
+#include "position.h"
 
 
 class Entity
@@ -10,15 +12,16 @@ public:
 	~Entity();
 
 	sf::Sprite sprite;
-	sf::Texture texture;
-	bool movable, collidable;
+	std::string textureID;
+
+	bool isMovable, isCollidable, isControllable;
 
 
-	double width, height;
-	std::pair<float, float> position;
+	position coords;
+	
 
 private:
-	void updatePosition();
+	void updatePosition(position newPos);
 
 };
 

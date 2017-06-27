@@ -37,7 +37,7 @@ void Game::run()
 			processEvents();
 			update(TimePerFrame);
 		}
-		render(levels[0]);
+		render(*activeScene);
 	}
 }
 
@@ -63,7 +63,7 @@ void Game::render(Scene lvl)
 {
 	
 	gameWindow.clear();
-	gameWindow.draw(lvl.entities[0]);//EDIT
+	//gameWindow.draw(lvl.entities[0]);//EDIT
 	gameWindow.display();
 
 }

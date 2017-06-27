@@ -1,0 +1,2 @@
+ADD:
+	exception handling to TextureHolder.loadO();
