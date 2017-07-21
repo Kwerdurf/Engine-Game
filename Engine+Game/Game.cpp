@@ -63,7 +63,9 @@ void Game::render(Scene lvl)
 {
 	
 	gameWindow.clear();
-	//gameWindow.draw(lvl.entities[0]);//EDIT
+	for (int i = 0; i < lvl.entities.size(); i++) {
+		gameWindow.draw(lvl.entities[i].sprite);
+	}
 	gameWindow.display();
 
 }

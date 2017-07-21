@@ -34,9 +34,9 @@ TextureHolder::~TextureHolder()
 void TextureHolder::load(std::vector<std::string> paths)
 {
 	for (int i = 0; i < paths.size(); i++) {
-		std::unique_ptr<sf::Texture> texture( new sf::Texture() );
+		std::shared_ptr<sf::Texture> texture( new sf::Texture() );
 		texture->loadFromFile(paths[i]);
-		texturemap.insert(std::make_pair( (IDmap.at(paths[i])), std::move(texture)));
+		texturemap.insert(std::make_pair( IDmap.at(paths[i]), std::move(texture)));
 	}
 }
 

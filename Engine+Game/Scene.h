@@ -1,23 +1,26 @@
-#pragma once
+#ifndef SCENE_H
+#define SCENE_H
 #include <SFML\Graphics.hpp>
 #include <vector>
 #include <string>
+#include "TextureHolder.h"
 #include "Entity.h"
+
 
 class Scene
 {
 public:
 	Scene();
+	Scene(std::vector<Entity> entities);
 	~Scene();
 
-	//bool isPlayable;
 
 	std::vector<Entity> entities;
 	
-	
 private:
-	bool loadTextures();
+	TextureHolder textureHolder;
 
 	
 };
 
+#endif

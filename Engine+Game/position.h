@@ -1,4 +1,5 @@
-#pragma once
+#ifndef POSITION_H
+#define POSITION_H
 class position
 {
 public:
@@ -12,3 +13,4 @@ public:
 	bool operator==(const position & other);
 };
 
+#endif

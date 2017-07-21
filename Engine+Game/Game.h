@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_H
+#define GAME_H
 #include "Scene.h"
 #include <vector>
 #include "SFML\Graphics.hpp"
@@ -27,3 +28,4 @@ private:
 	
 };
 
+#endif

@@ -1,5 +1,5 @@
-#pragma once
-#include "Scene.h"
+#ifndef TEXTUREHOLDER_H
+#define TEXTUREHOLDER_H
 #include <map>
 #include <memory>
 #include <string>
@@ -15,7 +15,7 @@ public:
 	TextureHolder(std::vector<std::string> paths, std::vector<std::string> IDs);
 
 	~TextureHolder();
-	std::map<std::string, std::unique_ptr<sf::Texture> > texturemap;
+	std::map<std::string, std::shared_ptr<sf::Texture> > texturemap;
 	int numOfTextures = 0;
 	bool isIdNumerical = false;
 	
@@ -25,3 +25,4 @@ private:
 	std::map<std::string, std::string> IDmap;
 };
 
+#endif

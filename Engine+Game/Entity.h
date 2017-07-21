@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENTITY_H
+#define ENTITY_H
 #include <SFML\Graphics.hpp>
 #include <utility>
 #include <string>
@@ -17,11 +18,11 @@ public:
 	bool isMovable, isCollidable, isControllable;
 
 
-	position coords;
+	position coords = position(0,0,0);
 	
 
 private:
 	void updatePosition(position newPos);
 
 };
-
+#endif
