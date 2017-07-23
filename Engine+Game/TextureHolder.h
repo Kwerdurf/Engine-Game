@@ -22,7 +22,7 @@ public:
 private:
 	void load(std::vector<std::string> paths);
 
-	std::map<std::string, std::string> IDmap;
+	std::map<std::string, std::string> IDmap;//path, ID
 };
 
 #endif

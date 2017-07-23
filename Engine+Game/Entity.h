@@ -4,7 +4,7 @@
 #include <utility>
 #include <string>
 #include "position.h"
-
+#include "PhysicsInstance.h"
 
 class Entity
 {
@@ -17,8 +17,8 @@ public:
 
 	bool isMovable, isCollidable, isControllable;
 
+	PhysicsInstance physicsInstance;
 
-	position coords = position(0,0,0);
 	
 
 private:
