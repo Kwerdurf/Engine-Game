@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "Game.h"
 #include <iostream>
-
+#include <cmath>
 int main()
 {
 
@@ -21,9 +21,8 @@ int main()
 	DEBUG*/
 
 	game.run();
-
-
-
+	std::cout << atan(-1.88);
+	std::cin.get();
 	return 0;
 }
  

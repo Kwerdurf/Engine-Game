@@ -6,7 +6,7 @@ physicsVector::physicsVector()
 {
 }
 
-physicsVector::physicsVector(double val, double angle, bool dir) : val(val), angle(angle), dir(dir)
+physicsVector::physicsVector(double val, double angle) : val(val), angle(angle)
 {
 }
 

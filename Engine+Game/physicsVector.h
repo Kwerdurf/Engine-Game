@@ -6,9 +6,8 @@ class physicsVector
 {
 public:
 	physicsVector();
-	physicsVector(double val, double angle, bool dir);
+	physicsVector(double val, double angle);//angle in radians
 	~physicsVector();
-	bool dir = false;
 	double val=0, angle=0;
 
 };
