@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PHYSICSVECTOR_H
+#define PHYSICSVECTOR_H
 #include <cmath>
 #include "position.h"
 
@@ -11,4 +12,4 @@ public:
 	double val=0, angle=0;
 
 };
-
+#endif

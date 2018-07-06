@@ -4,8 +4,7 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include <utility>
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
 class TextureHolder
 {
@@ -22,7 +21,7 @@ public:
 private:
 	void load(std::vector<std::string> paths);
 
-	std::map<std::string, std::string> IDmap;//path, ID
+	std::map<std::string, std::string> IdMap;//path, ID
 };
 
 #endif

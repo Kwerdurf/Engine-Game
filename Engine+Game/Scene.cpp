@@ -16,3 +16,8 @@ Scene::~Scene()
 {
 }
 
+void Scene::addEntity(Entity entity)
+{
+	entities.emplace_back(entity);
+}
+

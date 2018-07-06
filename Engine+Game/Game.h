@@ -2,14 +2,14 @@
 #define GAME_H
 #include "Scene.h"
 #include <vector>
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 
 class Game
 {
 public:
-	Game();
-	Game(int lvls);
+	Game(int VideoMode_height=640, int VideoMode_width=480);
+	Game(int lvls, int VideoMode_height = 640, int VideoMode_width = 480);
 	~Game();
 	void run();
 

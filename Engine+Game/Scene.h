@@ -1,8 +1,7 @@
 #ifndef SCENE_H
 #define SCENE_H
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <vector>
-#include <string>
 #include "TextureHolder.h"
 #include "Entity.h"
 
@@ -14,6 +13,7 @@ public:
 	Scene(std::vector<Entity> entities);
 	~Scene();
 
+	void addEntity(Entity entity);
 
 	std::vector<Entity> entities;
 	

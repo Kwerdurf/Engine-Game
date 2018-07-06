@@ -1,2 +1,9 @@
 ADD:
-	exception handling to TextureHolder.loadO();
+	Scene full implementation
+		entities
+		textures
+	tests of Scene gameplay
+		Game full mechanical check
+	
+	
+	exception handling to TextureHolder.load();

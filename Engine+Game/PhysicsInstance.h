@@ -1,5 +1,5 @@
-#pragma once
-#include <cmath>
+#ifndef PHYSICSINSTANCE_H
+#define PHYSICSINSTANCE_H
 #include "position.h"
 #include "physicsVector.h"
 /*
@@ -29,4 +29,4 @@ public:
 
 
 };
-
+#endif

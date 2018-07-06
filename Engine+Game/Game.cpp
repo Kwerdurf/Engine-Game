@@ -1,20 +1,20 @@
 #include "Game.h"
 #include "Scene.h"
-#include <stdlib.h>
 
 
-Game::Game() : gameWindow(sf::VideoMode(640, 480), "Game") {
-	levels.push_back(Scene());
+
+Game::Game(int VideoMode_height, int VideoMode_width) : gameWindow(sf::VideoMode(VideoMode_height,VideoMode_width), "Game") {
+	levels.emplace_back(Scene());
 
 	activeScene = &levels[0];
 }
 
 
-Game::Game(int lvls) : gameWindow(sf::VideoMode(640, 480), "Game")
+Game::Game(int lvls, int VideoMode_height, int VideoMode_width) : gameWindow(sf::VideoMode(VideoMode_height, VideoMode_width), "Game")
 {
 	
 	for (int i = 0; i < lvls; i++)
-		levels.push_back(Scene());
+		levels.emplace_back(Scene());
 	activeScene = &levels[0];
 
 
@@ -61,7 +61,7 @@ void Game::update(sf::Time time)
 
 void Game::render(Scene lvl)
 {
-	
+	//to be changed a lot
 	gameWindow.clear();
 	for (int i = 0; i < lvl.entities.size(); i++) {
 		gameWindow.draw(lvl.entities[i].sprite);
